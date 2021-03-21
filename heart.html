@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+        .heart{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            transform: rotate(45deg);
+            animation: ani 5s infinite  linear alternate;
+            cursor: pointer
+            ;
+        }
+        .heart::after{
+            content: "";
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: -50%;
+            background-color: red;
+            border-radius: 50%;
+            animation: ani 5s infinite linear alternate;
+        }
+        .heart::before{
+            content: "";
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: -50%;
+            right: 0;
+            background-color: red;
+            border-radius: 50%;
+            animation: ani 5s infinite  linear alternate ;
+        }
+        @keyframes ani{
+            0%{
+                width:200px;
+                height: 200px;
+
+            }
+            25%{
+                background-color: yellow;
+            }
+            50%{
+                background-color: green;
+            }
+            75%{
+                background-color: pink;
+            }
+            100%{
+                width:100px;
+                height: 100px;
+  
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+</body>
+</html>

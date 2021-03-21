@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        animation: rotate 2s ease forwards infinite;
+        background-color: #000;
+      }
+      .container,
+      .circle {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border-radius: 50%;
+      }
+      .circle {
+        position: relative;
+      }
+
+      .circle:nth-child(1) {
+        position: absolute;
+        left: -100px;
+        animation: slideLeft 2s ease forwards infinite;
+      }
+      .circle:nth-child(2) {
+        position: absolute;
+        left: 100px;
+        animation: slideRight 2s ease forwards infinite;
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes slideLeft {
+        0% {
+          transform: translateX(0px);
+        }
+        25% {
+          transform: translateX(-100px);
+        }
+        50% {
+          transform: translateX(0px);
+        }
+        100% {
+        }
+      }
+      @keyframes slideRight {
+        0% {
+          transform: translateX(0px);
+        }
+        25% {
+          transform: translateX(100px);
+        }
+        50% {
+          transform: translateX(0px);
+        }
+        100% {
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </body>
+</html>

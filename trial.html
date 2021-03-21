@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        background-color: rgb(1, 53, 53);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+
+        -webkit-box-reflect: below 1px linear-gradient(#0001, #0003);
+      }
+      .loader {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: relative;
+        /* -webkit-box-reflect: below 1px; */
+        animation: animate 2s linear infinite;
+      }
+      .loader::before {
+        content: '';
+        height: 100%;
+        width: 50%;
+        background: linear-gradient(cyan, rgba(0, 0, 0, 0.3));
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
+      .loader::after {
+        height: 20px;
+        width: 20px;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: cyan;
+        border-radius: 50%;
+        box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan,
+          0 0 50px cyan, 0 0 60px cyan, 0 0 70px cyan, 0 0 80px cyan,
+          0 0 90px cyan, 0 0 100px cyan;
+      }
+      .loader span {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 20px;
+        bottom: 20px;
+        background-color: #013939;
+        border-radius: 50%;
+      }
+      @keyframes animate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="loader"><span></span></div>
+    </div>
+  </body>
+</html>

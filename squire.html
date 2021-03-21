@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Squire</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(22, 21, 21);
+      }
+      .squire {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        animation: sqr 4s ease infinite forwards alternate;
+        position: relative;
+      }
+      @keyframes sqr {
+        0% {
+          top: 0;
+          left: 0;
+        }
+        25% {
+          top: 0;
+          left: 400px;
+          border-radius: 20px;
+          background-color: blue;
+        }
+        50% {
+          top: 400px;
+          left: 400px;
+          border-radius: 40px;
+          background-color: cyan;
+        }
+        75% {
+          top: 400px;
+          left: 0px;
+          border-radius: 50%;
+          background-color: darkgoldenrod;
+        }
+        100% {
+          top: 0px;
+          left: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="squire"></div>
+  </body>
+</html>
