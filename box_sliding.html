@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box sliding</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .center_div {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(1, 37, 37);
+      }
+      .box_sliding {
+        width: 600px;
+        height: 200px;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        -webkit-box-reflect: below 1px linear-gradient(#0001, #0003);
+      }
+
+      .box {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100px;
+        height: 100px;
+        background-color: cyan;
+        box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan;
+        animation: walk 20s ease alternate infinite;
+        /* border-radius: 50%; */
+      }
+      @keyframes walk {
+        0% {
+          bottom: 0;
+          left: 0;
+          transform: rotate(0deg);
+        }
+        20% {
+          transform: rotate(90deg);
+          bottom: 0px;
+          left: 100px;
+        }
+        40% {
+          transform: rotate(180deg);
+          bottom: 0px;
+          left: 200px;
+        }
+        60% {
+          transform: rotate(270deg);
+          bottom: 0px;
+          left: 300px;
+        }
+        80% {
+          transform: rotate(360deg);
+          bottom: 0;
+          left: 400px;
+        }
+        100% {
+          transform: rotate(450deg);
+          bottom: 0;
+          left: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center_div">
+      <div class="box_sliding">
+        <div class="box"></div>
+      </div>
+    </div>
+  </body>
+</html>
