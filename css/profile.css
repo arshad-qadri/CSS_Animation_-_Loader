@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.center_div {
+  height: 100vh;
+  width: 100%;
+  background-color: #1de0d5;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.top_Img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  cursor: pointer;
+  margin: 10px auto;
+}
+.profile .box {
+  width: 300px;
+  height: auto;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 0 0px 0px;
+  box-shadow: 0 0 20px rgb(184, 184, 184);
+  border-radius: 10px;
+  margin-top: 50px;
+  position: relative;
+  display: none;
+}
+.profile .box span {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 10px);
+  /* transform: translateX(-50%); */
+  transform: rotate(45deg);
+}
+.profile .box .box_top {
+  border-bottom: 1px solid rgb(214, 214, 214);
+  padding-bottom: 10px;
+}
+.profile .box .box_top h4 {
+  font-size: 1.6rem;
+  margin: 10px 0;
+}
+.profile .box .box_top p {
+  font-size: 1.1rem;
+  color: rgb(192, 181, 181);
+}
+.profile .box ul li {
+  list-style: none;
+  border-bottom: 1px solid #d3d0d0;
+}
+
+.profile .box ul li:last-child {
+  border-bottom: none;
+}
+.profile .box ul li a {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* margin: 20px; */
+  padding: 15px 20px;
+}
+.profile .box ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.profile .box ul li a .icon {
+  font-size: 1.5em;
+  color: rgb(201, 194, 194);
+}
+.profile .box ul li a:hover .title {
+  color: rgb(0, 204, 255);
+  transition: 0.1s;
+}
+.profile .box ul li a .title {
+  font-size: 1.1em;
+  margin-left: 20px;
+  color: rgb(88, 88, 88);
+}
+.active {
+  display: block !important;
+  animation: slide 1s ease;
+  transform: translateY(-40px);
+}
+@keyframes slide {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
