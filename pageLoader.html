@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Loader</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #353b48;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .container::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .loader {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border: 10px solid rgba(0, 0, 0, 0.2);
+        border-left: 10px solid yellow;
+        border-radius: 50%;
+        animation: rotate 3s linear infinite;
+      }
+      .loader::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        /* background-color: #fff; */
+      }
+      .loader::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 12px;
+        top: 12px;
+        background-color: yellow;
+        border-radius: 50%;
+        box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow,
+          0 0 40px yellow;
+      }
+      h1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: yellow;
+        z-index: 9999;
+        text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow,
+          0 0 40px yellow;
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="loader"></div>
+      <h1>Loader</h1>
+    </div>
+  </body>
+</html>
