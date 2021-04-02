@@ -31,13 +31,10 @@
         border-radius: 50%;
         position: fixed;
       }
-
       .box:nth-child(1) {
         width: 100px;
         height: 100px;
         border: 3px solid black;
-        border-left: 3px solid black;
-        border-right: 3px solid black;
         border-bottom: 3px solid transparent;
         animation: rotateRight 3s linear infinite;
       }
@@ -45,10 +42,7 @@
         width: 80px;
         height: 80px;
         border: 3px solid green;
-        border-top: 3px solid green;
         border-left: 3px solid transparent;
-        border-right: 3px solid green;
-        border-bottom: 3px solid green;
         animation: rotateleft 3s linear infinite;
       }
 
@@ -56,31 +50,21 @@
         width: 60px;
         height: 60px;
         border: 3px solid red;
-        border-top: 3px solid red;
-        border-left: 3px solid left;
-        border-right: 3px solid transparent;
-        border-bottom: 3px solid red;
+        border-top: 3px solid transparent;
         animation: rotateRight 3s linear infinite;
       }
       .box:nth-child(4) {
         width: 40px;
         height: 40px;
         border: 3px solid yellow;
-        border-top: 3px solid yellow;
-        border-left: 3px solid yellow;
-        border-right: 3px solid yellow;
-        border-bottom: 3px solid transparent;
+        border-right: 3px solid transparent;
         animation: rotateleft 3s linear infinite;
       }
       .box:nth-child(5) {
         width: 20px;
         height: 20px;
-        border: 3px solid blue;
-        border-top: 3px solid blue;
-        border-left: 3px solid transparent;
-        border-right: 3px solid blue;
-        border-bottom: 3px solid blue;
-        animation: rotateRight 3s linear infinite;
+        background: #000;
+        animation: circle 5s linear infinite;
       }
       @keyframes rotateRight {
         0% {
@@ -96,6 +80,20 @@
         }
         100% {
           transform: rotate(-360deg);
+        }
+      }
+      @keyframes circle {
+        0% {
+          background-color: #000;
+        }
+        33% {
+          background-color: green;
+        }
+        66% {
+          background-color: red;
+        }
+        10% {
+          background-color: yellow;
         }
       }
     </style>
