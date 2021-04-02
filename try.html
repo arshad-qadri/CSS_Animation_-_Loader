@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>try</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        width: 100%;
+        background: rgb(29, 26, 26);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 40%;
+        height: 60vh;
+        background: rgba(255, 255, 255, 0.1);
+        position: relative;
+      }
+      .left_line {
+        width: 5px;
+        height: 80px;
+        background-color: blue;
+        position: relative;
+        left: -5px;
+        top: 0;
+      }
+      .left_line::before {
+        content: '';
+        position: absolute;
+        left: -7.5px;
+        bottom: -18px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 5px solid blue;
+        background: rgb(29, 26, 26);
+      }
+      .left_line:nth-child(2) {
+        top: 17px;
+      }
+      .left_line:nth-child(3) {
+        top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+          laudantium odit dolores rerum vero, optio facilis voluptatem sint
+          repudiandae, ducimus eligendi amet voluptatum consectetur! Dignissimos
+          sint quae magnam quis quibusdam?
+        </p>
+        <div class="left_line"></div>
+        <div class="left_line"></div>
+        <div class="left_line"></div>
+      </div>
+    </div>
+  </body>
+</html>

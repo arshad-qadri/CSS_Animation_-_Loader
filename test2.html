@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="tab-content p-4" id="nav-tabContent">
+      <div
+        class="tab-pane tabStyle fade show active"
+        id="nav-home"
+        role="tabpanel"
+        aria-labelledby="nav-home-tab"
+      >
+        <h1 class="text-center my-4">
+          Welcome You, <br />
+          In this application
+        </h1>
+        <p class="text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit enim
+          quaerat alias placeat quos ullam dignissimos odio iste asperiores,
+          sunt explicabo nam, cupiditate quibusdam deleniti corporis
+          voluptatibus praesentium ab quae.
+        </p>
+      </div>
+      <div
+        class="tab-pane tabStyle fade"
+        id="nav-profile"
+        role="tabpanel"
+        aria-labelledby="nav-profile-tab"
+      >
+        <h2>Profile</h2>
+        <p>profile details here...</p>
+      </div>
+      <div
+        class="tab-pane tabStyle fade"
+        id="nav-contact"
+        role="tabpanel"
+        aria-labelledby="nav-contact-tab"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quidem
+        facere architecto accusantium excepturi expedita corrupti veniam
+        pariatur fuga officia quod possimus delectus, modi at sapiente eaque!
+        Dolore, quaerat! Iusto. Dolor, excepturi labore! Vero recusandae
+        architecto a similique itaque, aspernatur tempore impedit, explicabo
+        repellat nisi error! Omnis, quidem a, esse officiis cum, voluptate
+        possimus totam dolores pariatur facere nesciunt laboriosam. Voluptate
+        esse debitis cumque molestiae porro iure facilis, saepe nobis. Alias,
+        fugiat. Cum ea vel vitae reprehenderit? Delectus, nisi, nulla impedit
+        dolore incidunt, ipsum eligendi dolores expedita at laborum optio.
+      </div>
+      <div
+        class="tab-pane tabStyle fade"
+        id="nav-about"
+        role="tabpanel"
+        aria-labelledby="nav-about-tab"
+      >
+        <h2 class="text-center my-4">Help</h2>
+        <div class="form-check my-2">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios1"
+            value="option1"
+            checked
+          />
+          <label class="form-check-label" for="exampleRadios1">
+            Lorem ipsum dolor sit amet, consectetur.
+          </label>
+        </div>
+        <div class="form-check my-2">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </label>
+        </div>
+        <div class="form-check my-2">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+            inventore neque ad iusto soluta praesentium. Architecto, rem.
+            Cupiditate, alias.
+          </label>
+        </div>
+        <div class="form-check my-2">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </label>
+        </div>
+      </div>
+      <div
+        class="tab-pane tabStyle fade"
+        id="nav-service"
+        role="tabpanel"
+        aria-labelledby="nav-service-tab"
+      >
+        <h2 class="my-4">All Services</h2>
+        <ul>
+          <li class="my-2">Lorem ipsum dolor sit amet consectetur</li>
+          <li class="my-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </li>
+          <li class="my-2">lorem amet consectetur adipisicing elit</li>
+          <li class="my-2">lorem amet consectetur adipisicing elit</li>
+        </ul>
+      </div>
+    </div>
+    <nav class="fixed-bottom shadow bg-white pt-1">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button
+          class="nav-link active"
+          id="nav-home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-home"
+          type="button"
+          role="tab"
+          aria-controls="nav-home"
+          aria-selected="true"
+          title="Home"
+        >
+          <i class="fas fa-home"></i>
+        </button>
+        <button
+          class="nav-link"
+          id="nav-profile-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-profile"
+          type="button"
+          role="tab"
+          aria-controls="nav-profile"
+          aria-selected="false"
+          title="Prifile"
+        >
+          <i class="fas fa-user"></i>
+        </button>
+        <button
+          class="nav-link"
+          id="nav-contact-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-contact"
+          type="button"
+          role="tab"
+          aria-controls="nav-contact"
+          aria-selected="false"
+          title="Contact"
+        >
+          <i class="fas fa-phone-alt"></i>
+        </button>
+        <button
+          class="nav-link"
+          id="nav-about-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-about"
+          type="button"
+          role="tab"
+          aria-controls="nav-about"
+          aria-selected="false"
+          title="Help"
+        >
+          <i class="fas fa-question-circle"></i>
+        </button>
+        <button
+          class="nav-link"
+          id="nav-service-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-service"
+          type="button"
+          role="tab"
+          aria-controls="nav-service"
+          aria-selected="false"
+          title="All Services"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
